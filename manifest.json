@@ -1,21 +1,21 @@
 {
-    "name": "Knovon.net",
-    "short_name": "Knovon",
-    "description": "Knovon.net - A Knovon Company",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#111111",
-    "theme_color": "#111111",
-    "icons": [
-        {
-            "src": "https://mytab.knovon.net/knovontablogo.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "https://mytab.knovon.net/knovontablogo.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "name": "Knovon Kids",
+  "short_name": "Knovon Kids",
+  "description": "A parental control app by Knovon",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#00aaff",
+  "icons": [
+    {
+      "src": "assets/icons/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
