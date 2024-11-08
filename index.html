@@ -10,28 +10,47 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
-  <div class="app">
+  <div id="instructions" class="instructions">
+    <h1>How to Add Knovon for Kids to Your Home Screen</h1>
+    <p>To use this app, please add it to your home screen:</p>
+    <ol>
+      <li>Open the browser menu (usually three dots or a share icon).</li>
+      <li>Select <strong>"Add to Home Screen"</strong>.</li>
+      <li>Follow the prompts to install the app.</li>
+      <li>Reopen the app from your home screen.</li>
+    </ol>
+  </div>
+
+  <div id="app" class="app hidden">
     <!-- Logo -->
     <div class="logo">
-      <img src="assets/icons/logo.png" alt="Knovon for Kids Logo">
+      <img src="https://example.com/logo.png" alt="Knovon for Kids Logo">
     </div>
 
     <!-- Card Container -->
     <div class="card-container">
       <div class="card" onclick="showOverlay('VPN')">
-        <div class="icon"><img src="assets/icons/vpn-icon.png" alt="VPN Icon"></div>
+        <div class="icon">
+          <img src="https://icons8.com/icons/set/vpn" alt="VPN Icon">
+        </div>
         <p>VPN</p>
       </div>
       <div class="card" onclick="showOverlay('Install MDM')">
-        <div class="icon"><img src="assets/icons/mdm-icon.png" alt="MDM Icon"></div>
+        <div class="icon">
+          <img src="https://icons8.com/icons/set/mdm" alt="MDM Icon">
+        </div>
         <p>Install MDM</p>
       </div>
       <div class="card" onclick="showOverlay('DNS Settings')">
-        <div class="icon"><img src="assets/icons/dns-icon.png" alt="DNS Icon"></div>
+        <div class="icon">
+          <img src="https://icons8.com/icons/set/dns" alt="DNS Icon">
+        </div>
         <p>DNS Settings</p>
       </div>
       <div class="card" onclick="showOverlay('Account')">
-        <div class="icon"><img src="assets/icons/account-icon.png" alt="Account Icon"></div>
+        <div class="icon">
+          <img src="https://icons8.com/icons/set/user" alt="User Icon">
+        </div>
         <p>Account</p>
       </div>
     </div>
