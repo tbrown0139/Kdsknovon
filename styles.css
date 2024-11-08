@@ -9,82 +9,32 @@ body {
   min-height: 100vh;
 }
 
-.app {
+.hidden {
+  display: none;
+}
+
+.instructions {
   text-align: center;
-}
-
-.logo img {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-/* Card Container */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  max-width: 500px;
   padding: 20px;
-}
-
-.card {
   background-color: white;
   border-radius: 8px;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card .icon img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-/* Overlay Styles */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.overlay-content {
-  background: #333;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.overlay-content p {
-  font-size: 1.2em;
+.instructions h1 {
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
-.overlay-content button {
-  padding: 10px 20px;
-  background-color: #00aaff;
-  border: none;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
+.instructions ol {
+  text-align: left;
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: decimal;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  font-size: 1em;
 }
