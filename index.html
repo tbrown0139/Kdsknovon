@@ -1,140 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Knovon.net - A Knovon Company">
-    <meta name="theme-color" content="#111111">
-    <title>Knovon.net - A Knovon Company</title>
-
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="https://mytab.knovon.net/knovontablogo.png">
-    
-    <!-- iOS Web App Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Knovon.net">
-
-    <!-- Open Graph & Twitter Cards -->
-    <meta property="og:title" content="KnovonKids">
-    <meta property="og:description" content="Discover the simplicity of Knovon.net. A Knovon company.">
-    <meta property="og:image" content="https://mytab.knovon.net/knovontablogo.png">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://mytab.knovon.net/knovontablogo.png">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #111; /* Dark background for modern look */
-            color: #ffffff;
-            overflow: hidden;
-            -webkit-touch-callout: none;
-            user-select: none;
-            transition: background-color 0.3s;
-        }
-
-        .container {
-            text-align: center;
-            animation: fadeIn 1.5s ease;
-            padding: 20px;
-        }
-
-        .logo {
-            width: 60%;
-            max-width: 400px;
-            opacity: 0.8; /* Slight transparency */
-            transition: transform 0.3s;
-        }
-
-        h1, p {
-            opacity: 0.9;
-            color: #ffffff;
-            transition: opacity 0.5s ease;
-            font-weight: 300;
-            letter-spacing: 1.5px;
-        }
-
-        /* Dark and Light Mode */
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: #f4f4f4;
-                color: #111111;
-            }
-            h1, p {
-                color: #111111;
-            }
-        }
-
-        /* Responsive Layout Adjustments */
-        @media (max-width: 768px) {
-            .logo {
-                width: 80%;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            p {
-                font-size: 0.9em;
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knovon for Kids</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
-    <div class="container">
-        <img src="https://mytab.knovon.net/knovontablogo.png" alt="Knovon Logo" class="logo">
-        <h1>Knovon.net</h1>
-        <p>A Knovon Company</p>
+  <div class="app">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/icons/logo.png" alt="Knovon for Kids Logo">
     </div>
-    <script>
-        // Parallax effect for desktop
-        document.addEventListener("mousemove", (e) => {
-            const { innerWidth, innerHeight } = window;
-            const xPercent = (e.clientX / innerWidth - 0.5) * 10;
-            const yPercent = (e.clientY / innerHeight - 0.5) * 10;
-            document.querySelector(".container").style.transform = `translate(${xPercent}px, ${yPercent}px)`;
-        });
 
-        // Touch interactivity for mobile devices
-        document.querySelector('.logo').addEventListener("touchstart", () => {
-            document.querySelector('.logo').style.transform = "scale(1.05)";
-        });
-        document.querySelector('.logo').addEventListener("touchend", () => {
-            document.querySelector('.logo').style.transform = "scale(1)";
-        });
+    <!-- Card Container -->
+    <div class="card-container">
+      <div class="card" onclick="showOverlay('VPN')">
+        <div class="icon"><img src="assets/icons/vpn-icon.png" alt="VPN Icon"></div>
+        <p>VPN</p>
+      </div>
+      <div class="card" onclick="showOverlay('Install MDM')">
+        <div class="icon"><img src="assets/icons/mdm-icon.png" alt="MDM Icon"></div>
+        <p>Install MDM</p>
+      </div>
+      <div class="card" onclick="showOverlay('DNS Settings')">
+        <div class="icon"><img src="assets/icons/dns-icon.png" alt="DNS Icon"></div>
+        <p>DNS Settings</p>
+      </div>
+      <div class="card" onclick="showOverlay('Account')">
+        <div class="icon"><img src="assets/icons/account-icon.png" alt="Account Icon"></div>
+        <p>Account</p>
+      </div>
+    </div>
 
-        // Service Worker for Offline Support
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(() => {
-                console.log("Service Worker Registered");
-            });
-        }
-    </script>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <p id="overlay-text">This feature is coming soon.</p>
+        <button onclick="closeOverlay()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
 </body>
 </html>
