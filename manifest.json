@@ -1,0 +1,21 @@
+{
+    "name": "Knovon.net",
+    "short_name": "Knovon",
+    "description": "Knovon.net - A Knovon Company",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#111111",
+    "theme_color": "#111111",
+    "icons": [
+        {
+            "src": "https://mytab.knovon.net/knovontablogo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://mytab.knovon.net/knovontablogo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
