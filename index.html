@@ -37,7 +37,7 @@
         </div>
         <p>VPN</p>
       </div>
-      <div class="card" onclick="showOverlay('Install MDM')">
+      <div class="card" onclick="showMDMOverlay()">
         <div class="icon">
           <img src="https://img.icons8.com/ios/50/mdm.png" alt="MDM Icon">
         </div>
@@ -60,7 +60,8 @@
     <!-- Overlay -->
     <div id="overlay" class="overlay">
       <div class="overlay-content">
-        <p id="overlay-text">This feature is coming soon.</p>
+        <p id="overlay-text"></p>
+        <div id="overlay-buttons" class="overlay-buttons"></div>
         <button onclick="closeOverlay()">Close</button>
       </div>
     </div>
