@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -13,7 +12,37 @@ body {
   display: none !important;
 }
 
-/* App Section */
+.instructions {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.instructions .logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.instructions h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructions ol {
+  text-align: left;
+  padding: 0;
+  margin: 20px auto;
+  list-style-type: decimal;
+  color: #444;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
 .app {
   text-align: center;
   width: 100%;
@@ -24,7 +53,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Card Container */
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -36,7 +64,6 @@ body {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -44,23 +71,8 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card .icon img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Overlay Styles */
 .overlay {
   position: fixed;
   top: 0;
@@ -71,58 +83,15 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .overlay-content {
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
   border-radius: 20px;
-  text-align: center;
   max-width: 400px;
   width: 90%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(15px);
   color: white;
-}
-
-.overlay-content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.overlay-content .overlay-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.overlay-content .overlay-button {
-  padding: 15px;
-  background: #007aff;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.overlay-content .overlay-button:hover {
-  background: #005bb5;
-}
-
-.close-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #666;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.close-button:hover {
-  background: #444;
+  text-align: center;
 }

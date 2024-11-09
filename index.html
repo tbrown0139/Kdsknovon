@@ -10,8 +10,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
-  <!-- Instructions Section -->
   <div id="instructions" class="instructions hidden">
+    <div class="logo">
+      <img src="https://kids.knovon.org/knovonkidslogo.png" alt="Knovon for Kids Logo">
+    </div>
     <h1>How to Add Knovon for Kids to Your Home Screen</h1>
     <p>To use this app, follow these steps:</p>
     <ol>
@@ -22,14 +24,11 @@
     </ol>
   </div>
 
-  <!-- App Section -->
   <div id="app" class="app hidden">
-    <!-- Logo -->
     <div class="logo">
-      <img src="/assets/icons/logo.png" alt="Knovon for Kids Logo">
+      <img src="https://kids.knovon.org/knovonkidslogo.png" alt="Knovon for Kids Logo">
     </div>
 
-    <!-- Card Container -->
     <div class="card-container">
       <div class="card" onclick="showOverlay('VPN')">
         <div class="icon">
@@ -57,7 +56,6 @@
       </div>
     </div>
 
-    <!-- Overlay -->
     <div id="overlay" class="overlay">
       <div class="overlay-content">
         <h2 id="overlay-title"></h2>
@@ -68,16 +66,5 @@
   </div>
 
   <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
-  </script>
 </body>
 </html>
