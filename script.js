@@ -15,11 +15,11 @@ function showMDMOverlay() {
     alert('Install New Device functionality coming soon!');
   };
 
-  // Create "Manage My Device" button
+  // Create "Manage My Device" button with link
   const manageButton = document.createElement('button');
   manageButton.textContent = 'Manage My Device';
   manageButton.onclick = () => {
-    alert('Manage My Device functionality coming soon!');
+    window.open('https://zmdm.co/0zj3l', '_blank');
   };
 
   // Add buttons to the overlay
